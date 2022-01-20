@@ -1,0 +1,12 @@
+Use any convenient make utility with the provided makefile (adaptions may be necessary).
+
+Compilation options:
+
+EC_ARCH_AMIGA_DICE  -  Set this when compiling under DCC on Amiga.
+EC_ARCH_LINUX       -  Set this when compiling under Linux (Unix).
+EC_ARCH_OSX         -  Set this when compiling under MacOS
+
+EC_USE_GNU_READLINE -  Set this for to use GNU libreadline. This will
+                       enable command history, full command line editing,
+                       command history, and more.
+EC_USE_EDITLINE     -  Set this to use libeditline.

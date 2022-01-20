@@ -1,0 +1,49 @@
+
+Macros
+-------------------------------------------------------------------------------
+Syntax: !def [name] [expression]
+
+A macro can take any number of arguments. In the expression of the macro,
+the arguments are referred to by _n where n is the n:th argument. Of course
+a macro can call other macros and/or internal functions.
+
+Example:
+ec> !def f _1*7+_2
+f() defined OK.
+ec> f(3,4)
+ans = 25.00000
+ec>
+
+If the macro is already defined you can undefine it with
+ec> !undef [name]
+
+Example:
+ec> !undef f
+f() undefined OK.
+ec>
+
+
+Variables
+-------------------------------------------------------------------------------
+Setting a variable:
+A variable can be set in two ways. First with te command "set" that is mostly
+used in the .rc-file and second as any part of an expression with the '='
+operator.
+
+Example:
+ec> !set a 5
+a set OK.
+ec> a
+ans = 5.00000
+ec> 
+
+ec> b=4
+ec> b
+ans = 4.00000
+
+ec> 7*3/(c=3)
+ans = 7.00000
+ec> c
+ans = 3.00000
+ec>
+
